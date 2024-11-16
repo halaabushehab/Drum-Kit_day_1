@@ -12,8 +12,8 @@ audio.play();
 key.classList.add('playing');
 
 setTimeout(function() {
-
-},0.5);
+    key.classList.remove('playing');
+}, 500);
 });
 
  
