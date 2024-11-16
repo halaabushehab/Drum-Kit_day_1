@@ -4,15 +4,57 @@ console.log("16/11/2024")
  //======DOM=======
 window.addEventListener('keydown',function(e){
 
-const audio =this.document.querySelector(`audio[data-key='${e.keyCode}']`)
-console.log(audio);
+const audio =document.querySelector(`audio[data-key='${e.keyCode}']`)
+ const key =document.querySelector(`.key[data-key='${e.keyCode}']`)
+if(!audio)return;
+audio.currentTime=0;
+audio.play();
+key.classList.add('playing');
 
-})
+setTimeout(function() {
+
+},0.5);
+});
+
+ 
+// ازالة اشاره playing بعد الانتهاء من الانتقال
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //=============JQUERY
 // $(document).keydown(function(e) {
 
 // const audio=$(`audio[data-key='${e.keyCode}']`)
-//    console.log(audio);
+// const key =$(`.key[data-key='${e.keyCode}']`)
+// if(!audio)return;
+// audio.currentTime=0;
+// audio.play();
+// key.addClass('playing')
 // });
+
+
+// function removeTransition(e){
+//     if(e.orginalEvent.propertyName !== 'transform')return;
+//     $(this).removeClass('playing');
+// }
+
+// $('.key').on('transitionend', removeTransition);
